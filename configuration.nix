@@ -132,6 +132,7 @@
      tealdeer
      xclip
      bat
+     claude-code
   ];
   programs.steam.enable = true;
 
