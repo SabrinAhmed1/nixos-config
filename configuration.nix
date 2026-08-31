@@ -3,7 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
     ];
 
   # Enable Bluetooth support and power it on at boot
@@ -111,9 +111,10 @@
     ];
   };
 
-  # Install firefox.
+  # Allow programs
   programs.firefox.enable = true;
-
+  programs.steam.enable = true;
+  programs.nix-ld.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -134,7 +135,7 @@
      bat
      claude-code
   ];
-  programs.steam.enable = true;
+ 
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
