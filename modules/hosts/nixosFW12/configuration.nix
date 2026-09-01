@@ -3,6 +3,7 @@
     imports =
       [ # Include the results of the hardware scan.
         self.nixosModules.nixosFW12Hardware
+        self.nixosModules.niri
       ];
 
     # Enable Bluetooth support and power it on at boot
@@ -63,6 +64,9 @@
     services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
 
+    # Set Niri as default environment
+    services.displayManager.defaultSession = lib.mkForce "niri";
+    
     # Enable Tailscale
     services.tailscale.enable = true;
 
