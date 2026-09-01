@@ -68,6 +68,7 @@
           "Mod+Shift+L".move-column-right = {};
           "Mod+Shift+K".move-window-up = {};
           "Mod+Shift+J".move-window-down = {};
+          # Workspace hotkeys
           "Mod+1".focus-workspace = "w0";
           "Mod+2".focus-workspace = "w1";
           "Mod+3".focus-workspace = "w2";
@@ -89,7 +90,7 @@
           "Mod+Shift+8".move-column-to-workspace = "w7";
           "Mod+Shift+9".move-column-to-workspace = "w8";
           "Mod+Shift+0".move-column-to-workspace = "w9";
-
+          #App Window Size adjustment
           "Mod+Ctrl+H".set-column-width = "-5%";
           "Mod+Ctrl+L".set-column-width = "+5%";
           "Mod+Ctrl+J".set-window-height = "-5%";
@@ -99,10 +100,15 @@
           "Mod+WheelScrollUp".focus-column-right = {};
           "Mod+Ctrl+WheelScrollDown".focus-workspace-down = {};
           "Mod+Ctrl+WheelScrollUp".focus-workspace-up = {};
-
+          # Audio Control
           "XF86AudioRaiseVolume".spawn-sh = "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+";
           "XF86AudioLowerVolume".spawn-sh = "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-";
           "XF86AudioMute".spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+
+          # Brightness Control
+          "XF86MonBrightnessUp".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call brightness increase";
+          "XF86MonBrightnessDown".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call brightness decrease";
+          
         };
         workspaces = let
           settings = {layout.gaps = 5;};
