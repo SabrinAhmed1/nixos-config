@@ -139,6 +139,7 @@
       claude-code
       self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia
       wvkbd
+      iio-niri
     ];
   
 

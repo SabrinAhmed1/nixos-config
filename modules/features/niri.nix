@@ -16,8 +16,8 @@
         ];
         
         switch-events = {
-          tablet-mode-on.spawn = ["wvkbd-mobintl" "--hidden" "--auto"];
-          tablet-mode-off.spawn = ["pkill" "wvkbd"];
+          tablet-mode-on.spawn = ["sh" "-c" "wvkbd-mobintl --hidden --auto & iio-niri listen"];
+          tablet-mode-off.spawn = ["pkill" "wvkbd|iio-niri"];
         };
 
 
