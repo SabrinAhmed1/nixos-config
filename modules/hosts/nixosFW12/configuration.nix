@@ -137,6 +137,7 @@
       xclip
       bat
       claude-code
+      self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia
     ];
   
 

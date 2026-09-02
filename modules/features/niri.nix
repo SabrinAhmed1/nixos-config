@@ -8,9 +8,8 @@
 
   perSystem = { pkgs, lib, self', ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
-      inherit pkgs; # THIS PART IS VERY IMPORTAINT, I FORGOT IT IN THE VIDEO!!!
+      inherit pkgs; 
       settings = {
-         
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
         ];
@@ -53,6 +52,7 @@
           "Mod+F".maximize-column = {};
           "Mod+G".fullscreen-window = {};
           "Mod+Shift+F".toggle-window-floating = {};
+          
           "Mod+C".center-column = {};
           "Mod+H".focus-column-left = {};
           "Mod+L".focus-column-right = {};
@@ -68,6 +68,7 @@
           "Mod+Shift+L".move-column-right = {};
           "Mod+Shift+K".move-window-up = {};
           "Mod+Shift+J".move-window-down = {};
+
           # Workspace hotkeys
           "Mod+1".focus-workspace = "w0";
           "Mod+2".focus-workspace = "w1";
@@ -90,6 +91,7 @@
           "Mod+Shift+8".move-column-to-workspace = "w7";
           "Mod+Shift+9".move-column-to-workspace = "w8";
           "Mod+Shift+0".move-column-to-workspace = "w9";
+
           #App Window Size adjustment
           "Mod+Ctrl+H".set-column-width = "-5%";
           "Mod+Ctrl+L".set-column-width = "+5%";
