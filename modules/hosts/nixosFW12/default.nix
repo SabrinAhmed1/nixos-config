@@ -4,19 +4,6 @@
         modules = [ 
             self.nixosModules.nixosFW12Configuration 
             inputs.nixos-hardware.nixosModules.framework-12-13th-gen-intel
-            inputs.home-manager.nixosModules.home-manager
-            {
-                home-manager = {
-                    useGlobalPkgs = true;
-                    useUserPackages = true;
-                    users.sabrin = {
-                        imports = [
-                            self.homeManagerModules.nixosFW12HomeConfiguration
-                        ];
-                    };
-                    backupFileExtension = "backup";
-                };
-            }
       ];
     };
 }
