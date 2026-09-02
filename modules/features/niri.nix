@@ -10,10 +10,16 @@
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs; 
       settings = {
+        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
         spawn-at-startup = [
           (lib.getExe self'.packages.myNoctalia)
         ];
-        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+        
+        switch-events = {
+          tablet-mode-on.spawn = ["wvkbd-mobintl" "--hidden" "--auto"];
+          tablet-mode-off.spawn = ["pkill" "wvkbd"];
+        };
+
 
         input = {
           focus-follows-mouse = {};
@@ -126,6 +132,7 @@
           "w8" = settings;
           "w9" = settings;
         };
+        
       };
     };
   };
