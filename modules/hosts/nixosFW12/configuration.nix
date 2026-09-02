@@ -4,6 +4,7 @@
       [ # Include the results of the hardware scan.
         self.nixosModules.nixosFW12Hardware
         self.nixosModules.niri
+        self.nixosModules.kitty
       ];
 
     # Enable Bluetooth support and power it on at boot
