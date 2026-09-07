@@ -142,8 +142,9 @@
       wvkbd
       iio-niri
       krita
+      vesktop
     ];
-    
+
   
 
     # Some programs need SUID wrappers, can be configured further or are
