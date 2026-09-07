@@ -141,7 +141,9 @@
       self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia
       wvkbd
       iio-niri
+      krita
     ];
+    
   
 
     # Some programs need SUID wrappers, can be configured further or are
