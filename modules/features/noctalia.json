@@ -161,6 +161,12 @@
           "textColor": "none"
         },
         {
+          "displayMode": "onhover",
+          "iconColor": "none",
+          "id": "VPN",
+          "textColor": "none"
+        },
+        {
           "colorizeDistroLogo": false,
           "colorizeSystemIcon": "none",
           "colorizeSystemText": "none",
@@ -170,6 +176,7 @@
           "id": "ControlCenter",
           "useDistroLogo": false
         }
+        
       ]
     },
     "mouseWheelAction": "none",
