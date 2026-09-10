@@ -5,6 +5,9 @@
       settings =
         (builtins.fromJSON
           (builtins.readFile ./noctalia.json));
+      env = {
+        QT_QPA_PLATFORMTHEME="gtk3";
+      };
     };
   };
 }

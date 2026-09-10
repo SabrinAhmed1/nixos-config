@@ -143,8 +143,8 @@
       iio-niri
       krita
       vesktop
+      nwg-look
     ];
-
   
 
     # Some programs need SUID wrappers, can be configured further or are
