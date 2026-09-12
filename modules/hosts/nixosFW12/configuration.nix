@@ -144,6 +144,7 @@
       krita
       vesktop
       nwg-look
+      localsend
     ];
   
 
