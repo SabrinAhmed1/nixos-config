@@ -145,6 +145,7 @@
       vesktop
       nwg-look
       localsend
+      google-chrome
     ];
   
 
