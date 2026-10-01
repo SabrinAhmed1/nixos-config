@@ -125,7 +125,6 @@
     # Installed packages
     environment.systemPackages = with pkgs; [
       xournalpp
-      vscode
       pkgs.modrinth-app
       pkgs.kdePackages.qtsensors
       everforest-gtk-theme
@@ -146,6 +145,8 @@
       nwg-look
       localsend
       google-chrome
+      pkgs.zoom-us
+      vscode.fhs
     ];
   
 
