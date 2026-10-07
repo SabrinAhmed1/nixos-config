@@ -117,6 +117,11 @@
           "XF86MonBrightnessUp".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call brightness increase";
           "XF86MonBrightnessDown".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call brightness decrease";
           
+          # Screenshot
+          "Print".screenshot = {};
+          "Ctrl+Print".screenshot-screen = {};
+          "Alt+Print".screenshot-window = {};
+
         };
         workspaces = let
           settings = {layout.gaps = 5;};
