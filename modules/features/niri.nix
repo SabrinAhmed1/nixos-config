@@ -12,8 +12,16 @@
       settings = {
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
         spawn-at-startup = [
-          (lib.getExe self'.packages.myNoctalia)
+          [ (lib.getExe pkgs.kanshi) "-c" "${./kanshi.conf}" ]
+          [ (lib.getExe self'.packages.myNoctalia) ]
         ];
+
+        # Fallback for outputs
+        outputs = {
+          "eDP-1" = {
+            scale = 1.5;
+          };
+        };
         
         switch-events = {
           tablet-mode-on.spawn = ["sh" "-c" "wvkbd-mobintl --hidden --auto & iio-niri listen"];
@@ -42,6 +50,7 @@
             accel-profile = "flat";
           };
         };
+
         layout = {
           gaps = 5;
 
